@@ -641,3 +641,8 @@
 2013-09-04 22:03:25-0500 [__builtin__.CayenneWorker] Connection Made
 2013-09-04 22:03:28-0500 [CayenneProtocol,5,127.0.0.1] Connection dropped [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
 	]
+2013-09-04 22:44:04-0500 [-] Received SIGTERM, shutting down.
+2013-09-04 22:44:04-0500 [-] (Port 7777 Closed)
+2013-09-04 22:44:04-0500 [-] Stopping factory <__builtin__.CayenneWorker instance at 0x103316248>
+2013-09-04 22:44:04-0500 [-] Main loop terminated.
+2013-09-04 22:44:04-0500 [-] Server Shut Down.
