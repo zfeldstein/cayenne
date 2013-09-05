@@ -10,7 +10,7 @@ package CayenneClient;
     sub connect{
         my $self = shift;
         my $conn = IO::Socket::INET->new(
-                        Proto   => 'tcp',     
+                        Proto   => 'tcp',       
                         PeerAddr=> $self->host_name,
                         PeerPort=> $self->port,
                         Reuse   => 1,
@@ -19,10 +19,10 @@ package CayenneClient;
               " on port: ", $conn->peerport, "\n";
         $conn->autoflush(1);  # Send immediately
         while (<>) {    # Get input from STDIN
-                print $conn $_;       # Send to Server
+                print $conn "free_to_work";       # Send to Server
                 last if m/^end/gi;      # If 'end' then exit loop
                 my $line = <$conn>;   # Receive echo from server
-                if ($line ne $_) {      # If not the same as input
+                if ($line ne "send_operation") {      # If not the same as input
                         print "Error in sending output\n"; # error
                         exit;           # Terminate
                 }
